@@ -1,0 +1,22 @@
+# Hotel Bill Calculation
+
+# Constants
+#Expenses Every Month
+RATE_PER_DAY = 1500 #cost of rate per day
+AIRCON_FEE = 500 #cost of aircon fee
+INTERNET_FEE = 300 #cost of internet fee
+TV_FEE = 100 #cost of Tv fee
+EVAT = 0.12 #cost given for EVAT
+
+# Step 1: Accept the value for Number of Days
+num_days = int(input("Enter the number of days: "))
+
+# Step 2: Compute the bill
+#This is the Computation of expenses 
+amount = RATE_PER_DAY * num_days #Computaing the amount using the formula of rate per day multiply by how many days
+total_amount = amount + AIRCON_FEE + INTERNET_FEE + TV_FEE #Computing the total amount plus aircon fee plus internet 
+tax = total_amount * EVAT #Computing the tax using the formula of tatal amount multiply by EVAT 
+bill = total_amount + tax #Computing the bill using the formula of tatal amount plus tax
+
+# Step 3: Display the bill
+print("Bill =", bill) #Print bills
